@@ -1,12 +1,29 @@
 #know-us {
-    // height: 200px;
+    height: 120px;
     text-align: center;
 
+    div {
+        margin-top: 40px;
+    }
+
     h2 {
-        line-height: 120px;
+        margin: 0;
+        // padding-top: 22px;
+        // line-height: 120px;
         font-family: 'Raleway', sans-serif;
         font-weight: 700;
         color: rgb(51,61,93);
         text-transform: uppercase;
+    }
+}
+@media only screen and (max-width : 768px) {
+    #know-us {
+        div {
+            margin-top: 45px;
+        }
+
+        h2 {
+            font-size: 24px;
+        }
     }
 }

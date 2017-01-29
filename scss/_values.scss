@@ -1,4 +1,5 @@
 #values {
+    height: 800px;
     // .container {
     //     margin: 0;
     //     width: 100%;
@@ -10,21 +11,21 @@
     background-repeat: no-repeat;
     height: 400px;
     padding: 0;
-    width: 50%;
+    // width: 50%;
 }
 
 .val {
     height: 400px;
     padding: 0;
-    width: 50%;
+    // width: 50%;
 }
 
 .val-text {
     width: 70%;
-    margin: 0 auto;
+    margin: 20px auto 40px;
 
     h2 {
-        margin-top: 30px;
+        margin-top: 0;
         font-family: 'Raleway', sans-serif;
         font-weight: 900;
         color: rgb(51,61,93);
@@ -34,6 +35,7 @@
     }
 
     p {
+        margin-bottom: 0;
         font-family: 'Open sans', sans-serif;
         font-weight: 300;
         color: rgb(51,61,93);
@@ -50,4 +52,20 @@
 #second-image {
     background-image: url("../images/packed-berries.png");
     background-position: top right;
+}
+@media only screen and (max-width : 767px) {
+    #values {
+        height: 1600px;
+    }
+
+    .val-text {
+        margin: 60px auto 40px;
+    }
+
+    .val-img {
+        background-size: cover;
+    }
+    // #values {
+    //     height: 1600px;
+    // }
 }

@@ -70,12 +70,18 @@ input {
         text-transform: uppercase;
         letter-spacing: 2px;
         font-family: 'Open sans', sans-serif;
-        border: 2px solid lighten(rgb(51,61,93),0.9);
+        border: 2px solid #fff;
         background-color: transparent;
     }
 }
 @media only screen and (max-width : 767px) {
     .form-group {
         width: 70%;
+    }
+}
+@media only screen and (max-width : 500px) {
+    .form-group {
+        padding: 0;
+        width: 100%;
     }
 }

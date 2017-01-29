@@ -4,21 +4,18 @@
     background-image: url("../images/bowl.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: top left;
+    background-position: center;
 }
 
 #claim {
-    // width: 50%;
     margin: 0 auto;
     color: #fff;
     position: relative;
-    // top: 150px;
     padding-top: 150px;
 
     h1 {
         line-height: 60px;
         text-align: left;
-        // display: inline-block;
         margin: 0 auto;
         font-size: 44px;
         font-family: 'Raleway', sans-serif;
@@ -54,10 +51,24 @@
 }
 @media only screen and (max-width : 990px) {
     #parallax {
-        // background-image: url("../images/berries_hand.jpg");
-        // background-size: cover;
         h1 {
             font-size: 32px;
+        }
+    }
+}
+@media only screen and (max-width : 500px) {
+    #claim {
+        padding-top: 130px;
+    }
+
+    #parallax {
+        h1 {
+            // font-size: 28px;
+            line-height: 30px;
+        }
+
+        h2 {
+            // font-size: 22px;
         }
     }
 }

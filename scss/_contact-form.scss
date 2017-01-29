@@ -7,7 +7,7 @@ textarea {
     background: transparent;
     // background-color: lighten(#fff,0.2);
     border: 2px solid #fff;
-    width: 80%;
+    width: 100%;
     border-radius: 5px;
 }
 
@@ -27,7 +27,7 @@ input {
     background-image: url("../images/plant.png");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: right;
+    background-position: center;
 }
 
 .contact-text {
@@ -37,7 +37,7 @@ input {
         margin: 40px auto 20px;
         font-family: 'Raleway', sans-serif;
         font-weight: 900;
-        color: rgb(51,61,93);
+        color: #fff;
         font-size: 32px;
         text-transform: uppercase;
     }
@@ -46,7 +46,7 @@ input {
         letter-spacing: 2px;
         font-family: 'Open sans', sans-serif;
         font-weight: 400;
-        color: rgb(51,61,93);
+        color: #fff;
         font-size: 22px;
         text-transform: uppercase;
         line-height: 30px;
@@ -59,7 +59,7 @@ input {
 
 .form-group {
     padding: 0;
-    width: 50%;
+    width: 40%;
 
     button {
         display: block;
@@ -72,5 +72,10 @@ input {
         font-family: 'Open sans', sans-serif;
         border: 2px solid lighten(rgb(51,61,93),0.9);
         background-color: transparent;
+    }
+}
+@media only screen and (max-width : 767px) {
+    .form-group {
+        width: 70%;
     }
 }

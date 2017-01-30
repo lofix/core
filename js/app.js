@@ -39,13 +39,26 @@ $(document).ready(function() {
 
     };
 
+    //Desktop navigation scroll
+    var desktopNavigation = function() {
+        var navigationBar = $("nav")
+        var menuItems = navigationBar.find("li");
+        var navHeight = $("nav").height();
+        menuItems.click(function() {
+            var destination = $(this).data("name");
+            $("html, body").animate({
+                scrollTop: ($(destination).offset().top - navHeight)
+            }, 1000);
+
+
+        })
+
+    }
 
 
 
 
-
-
-
+    desktopNavigation();
     newNav();
     buttonScroll();
 })

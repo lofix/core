@@ -2,10 +2,12 @@
     text-align: center;
 
     div {
+        display: inline-block;
         margin: 40px 20px;
     }
 
     h2 {
+        margin: 0;
         font-family: 'Raleway', sans-serif;
         font-weight: 700;
         color: rgb(51,61,93);

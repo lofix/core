@@ -39,14 +39,28 @@
         border-radius: 100%;
         border: 1px solid #fff;
         background: transparent;
+        animation: moveY 2s infinite;
 
         span {
             position: relative;
-            top: 7px;
+            top: 5px;
             left: -1px;
             font-size: 30px;
             color: #fff;
         }
+    }
+}
+@keyframes moveY {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0);
     }
 }
 @media only screen and (max-width : 990px) {

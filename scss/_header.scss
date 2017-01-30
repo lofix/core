@@ -4,8 +4,7 @@ nav {
     width: 100%;
     z-index: 1000;
     background-color: transparent;
-    // -webkit-transition: all 5s ease;
-    // transition: all 5s ease;
+
     .lang {
         margin-right: 10px;
         margin-top: 35px;
@@ -32,6 +31,7 @@ nav {
 }
 
 .logo {
+    cursor: pointer;
     height: 52px;
     width: 230px;
     background-size: contain;
@@ -44,12 +44,20 @@ nav {
 
 #stillNav .logo {
     background-image: url("../images/core_logo_white.png");
+
+    .hamb-bar {
+        background-color: #fff;
+    }
 }
 
 #movedNav {
     display: none;
     background-color: #fff;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+    .hamb-bar {
+        background-color: rgb(51,61,93);
+    }
 
     li {
         color: rgb(51,61,93);
@@ -59,10 +67,33 @@ nav {
         background-image: url("../images/core_logo.png");
     }
 }
+
+.mobile-navigation {
+    display: none;
+}
+
+.hamburger {
+    cursor: pointer;
+    display: none;
+    margin-right: 30px;
+    margin-top: 6px;
+
+    .hamb-bar {
+        border-radius: 1px;
+        height: 2px;
+        width: 30px;
+        margin-top: 8px;
+        background-color: #fff;
+    }
+}
 @media only screen and (max-width : 768px) {
     .lang,
     .navigation {
         display: none;
+    }
+
+    .hamburger {
+        display: block;
     }
 
     .logo {
@@ -73,6 +104,6 @@ nav {
 }
 @media only screen and (max-width : 500px) {
     .logo {
-        margin-left: 30px;
+        margin-left: 5px;
     }
 }

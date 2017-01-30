@@ -4,7 +4,8 @@ nav {
     width: 100%;
     z-index: 1000;
     background-color: transparent;
-
+    // -webkit-transition: all 5s ease;
+    // transition: all 5s ease;
     .lang {
         margin-right: 10px;
         margin-top: 35px;
@@ -39,13 +40,32 @@ nav {
 
 .logo {
     height: 70px;
-    background-image: url("../images/core_logo_white.png");
     width: 230px;
     background-size: contain;
     background-repeat: no-repeat;
     margin-left: 50px;
-    margin-top: 30px;
+    margin-top: 22px;
     float: left;
+}
+
+#stillNav .logo {
+    background-image: url("../images/core_logo_white.png");
+}
+
+#movedNav {
+    display: none;
+    background-color: #fff;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+    a,
+    a:visited,
+    li {
+        color: rgb(51,61,93);
+    }
+
+    .logo {
+        background-image: url("../images/core_logo.png");
+    }
 }
 @media only screen and (max-width : 768px) {
     .lang,

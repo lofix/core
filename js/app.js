@@ -2,8 +2,9 @@ $(document).ready(function() {
 
     //Change Navigation when scrolled
     var newNav = function() {
-        var stillNav = $("#stillNav");
-        var scrolledNav = $("#movedNav");
+        var stillNav = $(".still-nav");
+        // var scrolledNav = $("#movedNav");
+        var bars = $(".hamb-bar");
 
         $(window).scroll(function() {
             var scrollPos = $(window).scrollTop();
@@ -12,13 +13,15 @@ $(document).ready(function() {
 
             if (scrollPos > 20) {
 
-                stillNav.hide(300);
-                scrolledNav.show(300);
+                // stillNav.hide(300);
+                // scrolledNav.show(300);
+                stillNav.addClass("scrolled-nav");
+                // bars.addClass("scrolled-hamb-bar");
 
             } else {
-
-                stillNav.show(300);
-                scrolledNav.hide(300);
+                stillNav.removeClass("scrolled-nav");
+                // stillNav.show(300);
+                // scrolledNav.hide(300);
 
             }
 
@@ -41,23 +44,33 @@ $(document).ready(function() {
 
     //Desktop navigation scroll
     var desktopNavigation = function() {
-        var navigationBar = $("nav")
-        var menuItems = navigationBar.find("li");
-        var navHeight = $("nav").height();
-        menuItems.click(function() {
-            var destination = $(this).data("name");
-            $("html, body").animate({
-                scrollTop: ($(destination).offset().top - navHeight)
-            }, 1000);
+            var navigationBar = $("nav")
+            var menuItems = navigationBar.find("li");
+            var navHeight = $("nav").height();
+            var mobileNavigation = $(".mobile-navigation");
+            menuItems.click(function() {
+                var destination = $(this).data("name");
+                $("html, body").animate({
+                    scrollTop: ($(destination).offset().top - navHeight)
+                }, 1000);
+                mobileNavigation.hide();
 
+            })
 
+        }
+        //Hamburger navigation
+
+    var hamburgerNavigation = function() {
+        var hamburgerMenu = $(".hamburger");
+        var mobileNavigation = $(".mobile-navigation");
+        hamburgerMenu.click(function() {
+            mobileNavigation.slideToggle();
+            console.log("klik");
         })
-
     }
 
 
-
-
+    hamburgerNavigation();
     desktopNavigation();
     newNav();
     buttonScroll();

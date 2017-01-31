@@ -32,7 +32,7 @@ $(document).ready(function() {
     //Arrow down button
     var buttonScroll = function() {
         var scrollButton = $(".scroll-down-btn");
-        var navHeight = $("#movedNav").height();
+        var navHeight = $(".still-nav").height();
         scrollButton.click(function() {
             var destination = $("#know-us");
             $("html, body").animate({
